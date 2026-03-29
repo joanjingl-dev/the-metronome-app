@@ -21,15 +21,27 @@
             padding: 20px;
             max-width: 600px;
         }
+
+        /* --- NUEVO ESTILO PARA EL LOGO --- */
+        .app-logo {
+            max-width: 120px; /* Ancho máximo del logo */
+            height: auto; /* Mantiene la proporción */
+            border-radius: 20px; /* Bordes redondeados (opcional) */
+            margin-bottom: 20px; /* Espacio con el título */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra suave (opcional) */
+        }
+        /* -------------------------------- */
+
         h1 {
-            font-size: 3rem;
+            font-size: 2.8rem; /* Un poco más pequeño para equilibrar con el logo */
             margin-bottom: 0.5rem;
-            color: #00e676; /* Un verde vibrante tipo metrónomo */
+            color: #00e676; /* Verde metrónomo */
+            margin-top: 0;
         }
         .tagline {
             font-size: 1.2rem;
             color: #bbb;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             line-height: 1.6;
         }
         .playstore-btn {
@@ -41,7 +53,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1rem;
-            transition: transform 0.2s;
+            transition: transform 0.2s, background-color 0.2s;
             margin-bottom: 3rem;
         }
         .playstore-btn:hover {
@@ -63,12 +75,15 @@
         .links a:hover {
             color: #00e676;
         }
-        p { color: #666; font-size: 0.8rem; margin-top: 20px; }
+        .links span { color: #444; } /* Separador */
+        
+        .legal-notice { color: #666; font-size: 0.8rem; margin-top: 20px; }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <img src="app_icon.png" alt="El Metrónomo Logo" class="app-logo">
         <h1>The Metronome</h1>
         <div class="tagline">
             Pensado para los músicos<br>
@@ -82,9 +97,10 @@
         <footer>
             <div class="links">
                 <a href="https://doc-hosting.flycricket.io/politica-de-privacidad-de-el-metronomo/d61a4e79-da2b-45f7-8798-3a9ed42b165c/privacy" target="_blank">Política de Privacidad</a>
+                <span>|</span>
                 <a href="https://doc-hosting.flycricket.io/terminos-de-servicio/a25051b0-940d-43ac-8afc-ffc82bd81116/terms" target="_blank">Términos de Uso</a>
             </div>
-            <p>&copy; 2024 JJIMdev - Todos los derechos reservados.</p>
+            <p class="legal-notice">&copy; 2024 JJIMdev - Todos los derechos reservados.</p>
         </footer>
     </div>
 
