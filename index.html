@@ -156,6 +156,9 @@
             const lang = document.getElementById('languagePicker').value;
             const t = translations[lang];
 
+            // Actualizar Título
+            document.getElementById('mainTitle').innerText = t.title;
+
             // Actualizar textos
             document.getElementById('tagline').innerHTML = t.tagline;
             document.getElementById('btnText').innerText = t.btn;
@@ -173,8 +176,10 @@
             const userLang = navigator.language || navigator.userLanguage;
             if (userLang.startsWith('en')) {
                 document.getElementById('languagePicker').value = 'en';
-                changeLanguage();
+            } else {
+                document.getElementById('languagePicker').value = 'es';
             }
+            changeLanguage();
         };
     </script>
 </body>
