@@ -18,7 +18,6 @@
             text-align: center;
         }
 
-        /* --- SELECTOR DE IDIOMA --- */
         .lang-selector {
             position: absolute;
             top: 20px;
@@ -69,12 +68,32 @@
             font-weight: bold;
             font-size: 1.1rem;
             transition: transform 0.2s, background-color 0.2s;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         .playstore-btn:hover {
             transform: scale(1.05);
             background-color: #00c853;
         }
+
+        /* --- NUEVA SECCIÓN DE SOPORTE --- */
+        .support-section {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 10px;
+            border: 1px dashed #333;
+        }
+        .support-section h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+            color: #00e676;
+        }
+        .support-link {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
         footer {
             margin-top: 2rem;
             border-top: 1px solid #333;
@@ -117,6 +136,12 @@
             Descargar en Play Store
         </a>
 
+        <div class="support-section">
+            <h2 id="supportTitle">¿Necesitas ayuda?</h2>
+            <p id="supportText">Si tienes problemas o sugerencias, escríbenos a:</p>
+            <a href="mailto:tuemail@ejemplo.com?subject=Soporte%20Metronomo" class="support-link">tuemail@ejemplo.com</a>
+        </div>
+
         <footer>
             <div class="links">
                 <a href="privacy-es.html" id="linkPrivacy">Política de Privacidad</a>
@@ -128,12 +153,13 @@
     </div>
 
     <script>
-        // Textos en ambos idiomas
         const translations = {
             es: {
-                title: "El Metrónomo", // <-- Nombre en español
+                title: "El Metrónomo",
                 tagline: "Pensado para los músicos<br><strong>Hecho por músicos</strong>",
                 btn: "Descargar en Play Store",
+                supportTitle: "¿Necesitas ayuda?",
+                supportText: "Si tienes problemas o sugerencias, escríbenos a:",
                 privacy: "Política de Privacidad",
                 terms: "Términos de Uso",
                 rights: "Todos los derechos reservados.",
@@ -141,9 +167,11 @@
                 termsLink: "terms-es.html"
             },
             en: {
-                title: "The Metronome", // <-- Nombre en inglés
+                title: "The Metronome",
                 tagline: "Designed for musicians<br><strong>Made by musicians</strong>",
                 btn: "Download on Play Store",
+                supportTitle: "Need help?",
+                supportText: "If you have issues or suggestions, write to us at:",
                 privacy: "Privacy Policy",
                 terms: "Terms of Service",
                 rights: "All rights reserved.",
@@ -156,29 +184,25 @@
             const lang = document.getElementById('languagePicker').value;
             const t = translations[lang];
 
-            // Actualizar Título
             document.getElementById('mainTitle').innerText = t.title;
-
-            // Actualizar textos
             document.getElementById('tagline').innerHTML = t.tagline;
             document.getElementById('btnText').innerText = t.btn;
+            
+            // Actualizar textos de soporte
+            document.getElementById('supportTitle').innerText = t.supportTitle;
+            document.getElementById('supportText').innerText = t.supportText;
+
             document.getElementById('linkPrivacy').innerText = t.privacy;
             document.getElementById('linkTerms').innerText = t.terms;
             document.getElementById('rightsText').innerText = t.rights;
 
-            // Actualizar enlaces a los archivos correspondientes
             document.getElementById('linkPrivacy').href = t.privacyLink;
             document.getElementById('linkTerms').href = t.termsLink;
         }
 
-        // Detectar idioma del navegador al cargar
         window.onload = () => {
             const userLang = navigator.language || navigator.userLanguage;
-            if (userLang.startsWith('en')) {
-                document.getElementById('languagePicker').value = 'en';
-            } else {
-                document.getElementById('languagePicker').value = 'es';
-            }
+            document.getElementById('languagePicker').value = userLang.startsWith('en') ? 'en' : 'es';
             changeLanguage();
         };
     </script>
