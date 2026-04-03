@@ -1,0 +1,14 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "the-metronome-app",
+    "description": "",
+    "home_page_url": "https://jjim-dev.github.io/the-metronome-app",
+    "feed_url": "https://jjim-dev.github.io/the-metronome-app/feed.json",
+    "user_comment": "",
+    "icon": "https://jjim-dev.github.io/the-metronome-app/media/website/app_icon.png",
+    "author": {
+        "name": "JJIMdev"
+    },
+    "items": [
+    ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://jjim-dev.github.io/the-metronome-app/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+<loc>https://jjim-dev.github.io/the-metronome-app/</loc>
+</url>
+<url>
+<loc>https://jjim-dev.github.io/the-metronome-app/privacy-en.html</loc>
+<lastmod>2026-04-03T22:07:23+02:00</lastmod>
+</url>
+<url>
+<loc>https://jjim-dev.github.io/the-metronome-app/privacy-es.html</loc>
+<lastmod>2026-04-03T21:41:49+02:00</lastmod>
+</url>
+<url>
+<loc>https://jjim-dev.github.io/the-metronome-app/terms-en.html</loc>
+<lastmod>2026-04-03T22:10:49+02:00</lastmod>
+</url>
+<url>
+<loc>https://jjim-dev.github.io/the-metronome-app/terms-es.html</loc>
+<lastmod>2026-04-03T22:10:56+02:00</lastmod>
+</url>
+</urlset>
